@@ -3,16 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode development",
     "build": "run-p type-check build-only",
-    "preview": "vite preview",
-    "build-only": "vite build",
+    "preview": "vite preview --port 8080",
+    "build-only": "vite build --mode production",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "@vueuse/core": "^9.10.0",
     "pinia": "^2.0.28",
+    "unplugin-icons": "^0.15.1",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
@@ -20,6 +21,9 @@
     "@arco-design/web-vue": "^2.41.1",
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/node": "^18.11.12",
+    "@unocss/preset-attributify": "^0.48.4",
+    "@unocss/preset-uno": "^0.48.4",
+    "@unocss/transformer-directives": "^0.48.4",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",
@@ -29,6 +33,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
     "typescript": "~4.7.4",
+    "unocss": "^0.48.4",
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.0",
